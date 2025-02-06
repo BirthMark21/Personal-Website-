@@ -1,0 +1,194 @@
+/* General styling */
+/* body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+} */
+
+/* Blog Container */
+.blog-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Create Blog Post Section */
+.create-post {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.create-post h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.create-post input,
+.create-post textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.create-post textarea {
+  height: 150px;
+}
+
+.create-post button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.create-post button:hover {
+  background-color: #0056b3;
+}
+
+/* Blog Post */
+.blog-post {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h3 {
+  font-size: 26px;
+  color: #222;
+}
+
+.blog-post p {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.8;
+}
+
+/* Post Actions */
+.post-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.post-actions button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.like-btn {
+  background: #28a745;
+  color: white;
+}
+
+.like-btn:hover {
+  background: #218838;
+}
+
+.dislike-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.dislike-btn:hover {
+  background: #c82333;
+}
+
+.share-btn {
+  background: #007bff;
+  color: white;
+}
+
+.share-btn:hover {
+  background: #0056b3;
+}
+
+.edit-btn {
+  background: #ffc107;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #e0a800;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+/* Comment Section */
+.comment-section {
+  margin-top: 20px;
+}
+
+.comment-section h4 {
+  font-size: 20px;
+  color: #080707;
+}
+
+.comment-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.comment-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.comment-input button {
+  background: #138496;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.comment-input button:hover {
+  background: #117a8b;
+}
+
+.comment-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comment-section li {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  color: green;
+}

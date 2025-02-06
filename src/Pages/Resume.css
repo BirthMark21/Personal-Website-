@@ -1,0 +1,81 @@
+/* Enhanced resume.css */
+
+.resume-container {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f5);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    color: #333;
+  }
+  
+  .resume-header {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #004080;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+    color: #0066cc;
+    margin-top: 5px;
+  }
+  
+  .contact-info {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  .resume-section {
+    margin-bottom: 25px;
+  }
+  
+  .resume-section h2 {
+    font-size: 1.8rem;
+    color: #004080;
+    border-bottom: 3px solid #0066cc;
+    padding-bottom: 7px;
+    margin-bottom: 15px;
+  }
+  
+  .skills-list, .certifications-list, .projects-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .skills-list li, .certifications-list li, .projects-list li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .job {
+    margin-bottom: 20px;
+  }
+  
+  .company {
+    font-style: italic;
+    color: #555;
+  }
+  
+  .job ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  strong {
+    color: #333;
+  }
+  
+  .resume-container p {
+    line-height: 1.6;
+  }
+  

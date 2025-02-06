@@ -1,0 +1,96 @@
+/* Apply Black Background to the Whole Page */
+body {
+  background-color: black !important; /* Set page background to black */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: black !important; /* Ensure navbar background is black */
+  padding: 15px 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar .nav-link, 
+.navbar-brand {
+  color: white !important; /* Make navbar text white */
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.navbar .nav-link:hover {
+  color: #f8f9fa !important; /* Lighten text slightly on hover */
+}
+
+/* Larger Navbar Logo */
+.navbar-brand img {
+  height: 80px; /* Increased logo height */
+  object-fit: contain;
+  background-color: black !important; /* Match navbar background */
+  padding: 5px;
+  border-radius: 8px;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Dropdown Menu */
+.nav-item.position-relative:hover .sub-navbar {
+  display: block;
+}
+
+.sub-navbar {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: #222; /* Dark gray dropdown */
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.sub-navbar .nav-link {
+  color: white !important;
+  padding: 10px 15px;
+  display: block;
+  font-size: 0.9rem;
+}
+
+.sub-navbar .nav-link:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  border-radius: 5px;
+}
+
+/* Mobile Menu */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-color: white; /* Make the toggler white */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .navbar-nav {
+      text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+      margin: 10px 0;
+  }
+
+  .sub-navbar {
+      position: relative;
+      background-color: black; /* Ensure dropdown background matches navbar */
+  }
+
+  .sub-navbar .nav-link {
+      color: white;
+  }
+
+  .navbar-brand img {
+      height: 60px; /* Adjust for smaller screens */
+  }
+}

@@ -1,0 +1,119 @@
+.skills-section {
+    padding: 50px 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    text-align: center;
+  }
+  
+  .skill-category {
+    margin-bottom: 50px;
+  }
+  
+  .category-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffcc00;
+    margin-bottom: 20px;
+  }
+  
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .skill-card {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .skill-icon {
+    margin-top: 30px;
+    color: #ffcc00;
+  }
+  
+  .skill-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 10px;
+  }
+  
+  .progress-circle {
+    margin-top: 20px;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .circle {
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .circle .mask {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    clip: rect(0px, 80px, 80px, 40px);
+  }
+  
+  .circle .mask.full,
+  .circle .mask.half .fill {
+    transform-origin: center right;
+  }
+  
+  .circle .fill {
+    background: #ffcc00;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  
+  .inside-circle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #1e3c72;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .btn-toggle {
+    background-color: #ffcc00;
+    color: #1e3c72;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .btn-toggle:hover {
+    background-color: #ffd633;
+    transform: scale(1.05);
+  }
+  

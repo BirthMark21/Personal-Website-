@@ -1,0 +1,64 @@
+.comment-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .comment-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  .comment-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .comment-btn:hover {
+    background: #0056b3;
+  }
+  
+  .comment-list {
+    margin-top: 20px;
+  }
+  
+  .comment-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .comment-text {
+    flex: 1;
+  }
+  
+  .comment-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .like-btn, .dislike-btn, .share-btn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .like-btn:hover { color: green; }
+  .dislike-btn:hover { color: red; }
+  .share-btn:hover { color: #007bff; }
+  

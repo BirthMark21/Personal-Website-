@@ -1,0 +1,186 @@
+/* General Reset */ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hero Section */
+#hero {
+  background: linear-gradient(135deg, #b61666, #0fb1ce);
+  position: relative;
+  min-height: 100vh;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../img/ggg.jpg') no-repeat center center/cover;
+}
+
+/* Handwriting Animation */
+@keyframes handwrittenEffect {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.animated-heading {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #0de018;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #0de018;
+  animation: handwrittenEffect 6s steps(40, end) forwards;
+}
+
+/* Services Section with 8-Color Gradient */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.services-section {
+  background: linear-gradient(45deg, 
+    #ff512f, #dd2476, #ff0055, #8e44ad, 
+    #cd34db, #321abc, #868a88, #db31a8,  #334a64, #c99abb);
+  background-size: 400% 400%;
+  animation: gradientAnimation 12s ease infinite;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: underline;
+  margin-bottom: 2rem;
+}
+
+/* Services Container */
+.services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 2rem;
+}
+
+/* Each Service Item as a Two-Column Grid */
+.service-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Left Column: Service Text with Bullet Details */
+.service-text {
+  text-align: left;
+  color: #fff;
+}
+
+.service-text h3 {
+  font-size: 1.8rem;
+  color: #0de018;
+  margin-bottom: 10px;
+}
+
+.service-text p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.service-details {
+  list-style: none;
+  padding-left: 0;
+}
+
+.service-details li {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.bullet-icon {
+  color: #0de018;
+  margin-right: 8px;
+}
+
+/* Right Column: Service Card with Title on Top and Image */
+/* Card slides in from left */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 0;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 500px;  /* Increased card size */
+  margin: 0 auto;
+  animation: slideIn 1s ease-out;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0de018;
+  padding: 15px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-image-wrapper {
+  position: relative;
+}
+
+.service-img {
+  width: 100%;
+  height: 250px; /* Increased image height */
+  object-fit: cover;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* Responsive: Stack Columns on Smaller Screens */
+@media (max-width: 768px) {
+  .service-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .service-text {
+    margin-bottom: 20px;
+  }
+}
