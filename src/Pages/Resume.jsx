@@ -2,7 +2,7 @@ import React from "react";
 import { Worker, Viewer } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import { pdfjs } from "react-pdf";
-import "./resume.css";
+import "./Resume.css";
 
 // Set the correct worker script URL for version 3.11.174
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`; // Remote setup
