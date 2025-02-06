@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import logo from "../img/CBCD_ico.PNG";
+import logo from "../img/misganaw_logo.png";
 import { EventContext } from "../MyContext";
 import useAuth from "../UseAuth";
 import "./nav.css";
