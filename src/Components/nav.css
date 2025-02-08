@@ -1,54 +1,67 @@
 /* Apply Black Background to the Whole Page */
 body {
-  background-color: black !important; /* Set page background to black */
+  background-color: black !important;
+  margin: 0;
+  padding: 0;
 }
 
 /* Navbar Styles */
 .navbar {
-  background-color: black !important; /* Ensure navbar background is black */
-  padding: 15px 0;
-  transition: background-color 0.3s ease-in-out;
+  background-color: black !important;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  height: 60px;
 }
 
-.navbar .nav-link, 
-.navbar-brand {
-  color: white !important; /* Make navbar text white */
+/* Navbar Logo Styling */
+.navbar-logo {
+  max-height: 40px;
+  width: auto;
+  vertical-align: middle;
+}
+
+/* Navbar Links */
+.navbar .nav-link {
+  color: white !important;
   font-weight: bold;
   font-size: 1rem;
+  padding: 10px 15px;
 }
 
 .navbar .nav-link:hover {
-  color: #f8f9fa !important; /* Lighten text slightly on hover */
+  color: #f8f9fa !important;
 }
 
-/* Larger Navbar Logo */
-.navbar-brand img {
-  height: 80px; /* Increased logo height */
-  object-fit: contain;
-  background-color: black !important; /* Match navbar background */
-  padding: 5px;
-  border-radius: 8px;
-  margin-right: 10px;
-  transition: transform 0.3s ease-in-out;
+/* Navbar Toggler */
+.navbar-toggler {
+  border: none;
+  outline: none;
 }
 
-/* Dropdown Menu */
-.nav-item.position-relative:hover .sub-navbar {
-  display: block;
+.navbar-toggler-icon {
+  background-color: white;
 }
 
+/* Sub-navbar: Hidden by default */
 .sub-navbar {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   min-width: 200px;
-  background-color: #222; /* Dark gray dropdown */
+  background-color: #222;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
+/* Show sub-navbar on hover */
+.nav-item.position-relative:hover .sub-navbar {
+  display: block;
+}
+
+/* Style for sub-navbar links */
 .sub-navbar .nav-link {
   color: white !important;
   padding: 10px 15px;
@@ -57,40 +70,47 @@ body {
 }
 
 .sub-navbar .nav-link:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: #0056b3;
   border-radius: 5px;
 }
 
-/* Mobile Menu */
-.navbar-toggler {
-  border: none;
-  outline: none;
-}
+/* Mobile View */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+  }
 
-.navbar-toggler-icon {
-  background-color: white; /* Make the toggler white */
-}
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
 
-/* Responsive Adjustments */
-@media (max-width: 992px) {
+  .navbar-logo {
+    max-height: 35px;
+  }
+
+  .navbar-collapse {
+    background-color: black;
+    text-align: center;
+  }
+
   .navbar-nav {
-      text-align: center;
+    width: 100%;
   }
 
-  .navbar-nav .nav-item {
-      margin: 10px 0;
+  .nav-item {
+    margin: 5px 0;
   }
 
+  /* Ensure sub-navbar is hidden in mobile until hovered */
   .sub-navbar {
-      position: relative;
-      background-color: black; /* Ensure dropdown background matches navbar */
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    display: none;
   }
 
-  .sub-navbar .nav-link {
-      color: white;
-  }
-
-  .navbar-brand img {
-      height: 60px; /* Adjust for smaller screens */
+  .nav-item.position-relative:hover .sub-navbar {
+    display: block;
   }
 }

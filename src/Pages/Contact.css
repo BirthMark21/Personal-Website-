@@ -1,29 +1,52 @@
 /* Contact Page Styling */
 #contact {
-  background: #f5f5f5;
+  background: url('../img/misganaw_logo.png') no-repeat center center; /* Add background image */
+  background-size: cover;
   padding: 60px 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
+/* Dark Overlay for better text visibility */
+#contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: -1; /* Place overlay behind content */
+}
+
+/* Container */
 .contact-container {
   max-width: 1100px;
   width: 100%;
   text-align: center;
+  position: relative;
+  z-index: 1; /* Ensure container is above the overlay */
 }
 
+/* Section Title */
 .contact-title {
   font-size: 36px;
   font-weight: bold;
-  color: #6b46c1;
+  color: #fff;
   margin-bottom: 20px;
+  z-index: 1;
 }
 
+/* Contact Grid */
 .contact-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  z-index: 1;
 }
 
 .contact-card {
@@ -31,9 +54,9 @@
   border-radius: 10px;
   padding: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
   text-align: left;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-subtitle {
@@ -41,6 +64,7 @@
   color: #2d9c9c;
   text-align: center;
   margin-bottom: 15px;
+  z-index: 1;
 }
 
 /* Contact Details Styling */
@@ -103,6 +127,7 @@
   color: #6b46c1;
 }
 
+/* Contact Button */
 .contact-button {
   background: #6b46c1;
   color: white;
@@ -126,14 +151,45 @@
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Bottom Navigation Bar */
+.bottom-nav {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+.nav-button {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 5px;
+  background: #6b46c1;
+  display: inline-block;
+}
+
+.nav-button:hover {
+  background: #553c9a;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .contact-grid {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
 
   .contact-card {
     width: 100%;
+  }
+
+  .contact-title {
+    font-size: 28px;
+  }
+
+  .contact-subtitle {
+    font-size: 20px;
   }
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./Components/Navbar";
+
 import Footer from "./Components/Footer";
 import About from "./Pages/About";
 import Projects from "./Pages/Projects";
@@ -16,6 +17,7 @@ import Completedprojects from "./Pages/Completedprojects";
 import Resume from "./Pages/Resume";
 import ProjectIdeas from "./Pages/ProjectIdeas";
 import ScrollToTop from "./Components/ScrollToTop";
+
 import SomeCom from "./Pages/SomeCom";
 import Admin from "./Pages/Admin";
 import SpeakerReg from "./Components/SpeakerReg";
@@ -27,6 +29,7 @@ import Lobby from "./Pages/Lobby";
 import EventSuccess from "./Pages/EventSuccess";
 import CountCard from "./Components/Admin/CountCard";
 import RoomLogin from "./Pages/RoomLogin";
+import Navigation from "./Components/Navigation";
 import DetailAdmin from "./Components/DetailAdmin";
 // import Login from "./Pages/Login";
 // import Signin from "./Pages/Signin";
@@ -38,12 +41,13 @@ const AllRoutes = () => {
   return (
     <>
       {/* {!isLoginPage && <Navbar />} */}
+      <Navbar/>
       <ScrollToTop />
       <Routes>
       <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/reference" element={<Blog />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />
@@ -70,7 +74,9 @@ const AllRoutes = () => {
         {/* <Route path="/signin" element={<Signin />} /> */}
         {/* <Route path="/profile" element={<Profile />} /> */}
       </Routes>
+      <Navigation />
       <Footer />
+     
     </>
   );
 };

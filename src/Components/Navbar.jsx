@@ -40,14 +40,7 @@ const Navbar = () => {
           <img 
             src={logo} 
             alt="Logo" 
-            style={{
-              maxWidth: "160px", 
-              backgroundColor: "white", 
-              padding: "5px",
-              borderRadius: "8px",
-              marginTop: "-10px",
-              boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.2)"
-            }} 
+            className="navbar-logo"
           />
         </NavLink>
 
@@ -91,7 +84,7 @@ const Navbar = () => {
               <NavLink to="/about" className="nav-link">About</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/blog" className="nav-link">Blog</NavLink>
+              <NavLink to="/reference" className="nav-link">Reference</NavLink>
             </li>
             <li className="nav-item">
               <NavLink to="/contact" className="nav-link">Contact</NavLink>

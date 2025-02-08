@@ -1,119 +1,161 @@
 .skills-section {
-    padding: 50px 0;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: #fff;
-    text-align: center;
+  padding: 100px 0; /* Increased padding to leave space for the image */
+  background: url('../img/ggg.jpg') no-repeat center center; /* Your image */
+  background-size: cover; /* Ensures the image covers the section */
+  color: #fff;
+  text-align: center;
+  position: relative; /* For layering content on top of the background image */
+}
+
+.skill-group {
+  position: relative;
+  z-index: 1; /* Makes sure the skills content is above the background */
+}
+
+.category-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+.skill-category {
+  margin-bottom: 50px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  z-index: 1; /* Ensures content is not hidden behind the background */
+}
+
+/* Skill Cards */
+.skill-card {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1; /* Ensures the card appears on top of the background */
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skill-icon {
+  margin-top: 30px;
+  color: #ffcc00;
+}
+
+.skill-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.progress-circle {
+  margin-top: 20px;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.circle .mask {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  clip: rect(0px, 80px, 80px, 40px);
+}
+
+.circle .mask.full,
+.circle .mask.half .fill {
+  transform-origin: center right;
+}
+
+.circle .fill {
+  background: #ffcc00;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.inside-circle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #1e3c72;
+  border-radius: 50%;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn-toggle {
+  background-color: #ffcc00;
+  color: #1e3c72;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-toggle:hover {
+  background-color: #ffd633;
+  transform: scale(1.05);
+}
+
+/* Dark Overlay for better text visibility */
+.skills-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 0; /* Places overlay behind the content */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 60px 0; /* Adjust padding for smaller screens */
   }
-  
-  .skill-category {
-    margin-bottom: 50px;
-  }
-  
-  .category-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ffcc00;
-    margin-bottom: 20px;
-  }
-  
+
   .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    gap: 15px; /* Reduce gap for smaller screens */
   }
-  
+
   .skill-card {
-    position: relative;
-    width: 200px;
-    height: 250px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden;
-    text-align: center;
+    width: 150px; /* Make skill cards smaller */
+    height: 200px; /* Adjust height */
   }
-  
-  .skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  }
-  
-  .skill-icon {
-    margin-top: 30px;
-    color: #ffcc00;
-  }
-  
-  .skill-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #fff;
-    margin-top: 10px;
-  }
-  
+
   .progress-circle {
-    margin-top: 20px;
-    position: relative;
-    width: 80px;
-    height: 80px;
-    background: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .circle {
-    position: relative;
-    width: 80px;
-    height: 80px;
-  }
-  
-  .circle .mask {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    clip: rect(0px, 80px, 80px, 40px);
-  }
-  
-  .circle .mask.full,
-  .circle .mask.half .fill {
-    transform-origin: center right;
-  }
-  
-  .circle .fill {
-    background: #ffcc00;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-  }
-  
-  .inside-circle {
-    position: absolute;
     width: 60px;
     height: 60px;
-    background: #1e3c72;
-    border-radius: 50%;
-    line-height: 60px;
-    text-align: center;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
   }
-  
-  .btn-toggle {
-    background-color: #ffcc00;
-    color: #1e3c72;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-  }
-  
-  .btn-toggle:hover {
-    background-color: #ffd633;
-    transform: scale(1.05);
-  }
-  
+}

@@ -3,16 +3,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 html, body {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
 }
 
-/* Remove Default Link Styles */
 a {
   text-decoration: none;
   color: inherit;
@@ -20,7 +19,7 @@ a {
 
 /* Hero Section */
 #hero {
-  background: url('../img/ggg.jpg') no-repeat center center/cover;
+  background: url('../img/noe.JPG') no-repeat center center/cover;
   position: relative;
   min-height: 100vh;
   width: 100%;
@@ -31,43 +30,33 @@ a {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Handwriting Animation */
-@keyframes handwrittenEffect {
-  from {
-    width: 0;
-    opacity: 0;
-  }
-  to {
-    width: 100%;
-    opacity: 1;
-  }
-}
-
-.animated-heading {
-  font-family: 'Dancing Script', cursive;
-  font-size: 3rem;
+#hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
   color: #0de018;
-  margin-bottom: 1rem;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid #0de018;
-  animation: handwrittenEffect 6s steps(40, end) forwards;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px 20px;
+  border-radius: 10px;
   max-width: 90%;
+  text-transform: uppercase;
 }
 
-/* Services Section with 8-Color Gradient */
-@keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+#hero h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  border-radius: 8px;
+  max-width: 80%;
 }
 
+/* Services Section */
 .services-section {
-  background: linear-gradient(45deg, 
-    #ff512f, #dd2476, #ff0055, #8e44ad, 
-    #cd34db, #321abc, #868a88, #db31a8,  #334a64, #c99abb);
+  background: linear-gradient(45deg, #ff512f, #dd2476, #ff0055, #8e44ad, #cd34db, #321abc, #868a88, #db31a8, #334a64, #c99abb);
   background-size: 400% 400%;
   animation: gradientAnimation 12s ease infinite;
   padding: 3rem 1rem;
@@ -84,7 +73,6 @@ a {
   margin-bottom: 2rem;
 }
 
-/* Services Container */
 .services-container {
   display: flex;
   flex-direction: column;
@@ -93,10 +81,9 @@ a {
   max-width: 100%;
 }
 
-/* Each Service Item: Keep Grid Layout on All Screens */
 .service-item {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   align-items: start;
   gap: 20px;
   padding: 20px;
@@ -104,7 +91,6 @@ a {
   max-width: 100%;
 }
 
-/* Left Column: Service Text */
 .service-text {
   text-align: left;
   color: #fff;
@@ -138,18 +124,6 @@ a {
   margin-right: 8px;
 }
 
-/* Right Column: Service Card */
-@keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 .service-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -160,7 +134,6 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.2);
   max-width: 500px;
   margin: 0 auto;
-  animation: slideIn 1s ease-out;
 }
 
 .card-title {
@@ -186,25 +159,38 @@ a {
   border-bottom-right-radius: 15px;
 }
 
-/* Responsive: Keep Grid Layout on Mobile */
+/* Navbar */
+/* .navbar {
+  background-color: black;
+}
+
+.navbar-nav .nav-item {
+  margin: 5px 10px;
+  color: white;
+  background-color: transparent;
+  padding: 5px 10px;
+  border-radius: 5px;
+} */
+
 @media (max-width: 768px) {
-  .animated-heading {
-    font-size: 2.5rem;
+  #hero h1 {
+    font-size: 2.8rem;
     max-width: 100%;
     white-space: normal;
   }
 
-  /* Keep Service Layout as Grid on Mobile */
+  #hero h2 {
+    font-size: 1.8rem;
+    max-width: 100%;
+    white-space: normal;
+  }
+
   .service-item {
-    grid-template-columns: 1fr 1fr; /* Keep two columns */
+    grid-template-columns: 1fr;
     align-items: center;
     text-align: left;
     gap: 10px;
     width: 100%;
-  }
-
-  .service-text {
-    padding: 10px;
   }
 
   .service-card {
@@ -215,10 +201,6 @@ a {
   .service-img {
     height: 220px;
   }
-}
 
-/* Fix Navbar and Prevent Horizontal Scroll */
-/* nav {
-  width: 100%;
-  overflow-x: hidden;
-} */
+ 
+}

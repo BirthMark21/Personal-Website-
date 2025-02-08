@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Contact.css"; // Import external CSS
 
 const Contact = () => {
@@ -50,6 +51,15 @@ const Contact = () => {
           </div>
         </div>
       </div>
+{/* 
+      Bottom Navigation Bar */}
+      {/* <nav className="bottom-nav">
+        <Link to="/home" className="nav-button">Back to Home</Link>
+        <Link to="/projects" className="nav-button">Back to Project</Link>
+        <Link to="/about" className="nav-button">Back to About</Link>
+        <Link to="/skills" className="nav-button">Back to Skills</Link>
+      </nav>
+       */}
     </section>
   );
 };

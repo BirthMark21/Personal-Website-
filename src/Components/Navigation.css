@@ -1,0 +1,87 @@
+/* Apply Black Background to the Whole Page */
+body {
+    background-color: black !important;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: rgb(11, 8, 184) !important; /* Set navbar background color to blue for all devices */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+  
+  /* Navbar Logo Styling */
+  .navbar-logo {
+    max-height: 40px;
+    width: auto;
+    vertical-align: middle;
+  }
+  
+  /* Navbar Links */
+  .navbar .nav-link {
+    color: white !important;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #f8f9fa !important;
+  }
+  
+  /* Navbar Toggler */
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: white;
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    /* Navbar Container */
+    .navbar {
+      padding: 10px;
+      position: relative; /* Ensure relative positioning for absolute children */
+    }
+  
+    /* Navbar Brand (Logo) */
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  
+    .navbar-logo {
+      max-height: 40px;
+    }
+  
+    /* Navbar Collapse (Expanded Menu) */
+    .navbar-collapse {
+      background-color: rgb(11, 8, 184) !important; /* Blue background */
+      text-align: right !important; /* Align text to the right */
+      position: absolute !important; /* Position absolutely */
+      top: 60px !important; /* Adjust based on navbar height */
+      right: 0 !important; /* Align to the right */
+      width: 200px !important; /* Fixed width for better alignment */
+      z-index: 1000 !important; /* Ensure it's above other content */
+      padding: 10px !important; /* Add some padding */
+      border-radius: 5px !important; /* Optional: Add rounded corners */
+    }
+  
+    /* Navbar Links in Mobile View */
+    .navbar-nav {
+      width: 100%;
+      text-align: right !important; /* Align text to the right */
+    }
+  
+    .nav-item {
+      margin: 5px 0;
+    }
+  }

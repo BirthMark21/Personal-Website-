@@ -47,7 +47,7 @@ const Projects = () => {
       padding: "60px 10px",
     }}>
       <div className="container">
-        <h2 className="section-title">Our Amazing Projects</h2>
+        <h2 className="section-title">My Projects</h2>
 
         {/* Project Ideas Section */}
         <h2 className="section-subtitle">💡 Project Ideas</h2>

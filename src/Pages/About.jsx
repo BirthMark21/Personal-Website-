@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
 import './About.css';
 import Navbar from "../Components/Navbar";
 import { FaPen, FaArrowDown, FaArrowUp } from 'react-icons/fa'; // Icons
@@ -41,6 +41,27 @@ const About = () => {
           <div className="col-md-6 text-center">
             <div className="image-card animate-card">
               <img src={profilePic} alt="Profile Picture" className="ellipse-image" />
+            </div>
+          </div>
+        </div>
+        {/* Passion Cards Section */}
+        <div className="row mt-4">
+          <div className="col-md-6">
+            <div className="content-card animate-card passion-card">
+              <h2 className="section-title">Software Development & Data Science</h2>
+              <p>
+                Passionate about building scalable software solutions and leveraging data science
+                techniques to extract meaningful insights, automate processes, and solve complex problems.
+              </p>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="content-card animate-card passion-card">
+              <h2 className="section-title">AI, ML & Neural Adaptive Computing</h2>
+              <p>
+                Enthusiastic about artificial intelligence, machine learning, and deep learning.
+                Interested in developing intelligent systems using neural networks and adaptive computing techniques.
+              </p>
             </div>
           </div>
         </div>

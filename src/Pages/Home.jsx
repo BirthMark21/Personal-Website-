@@ -44,11 +44,6 @@ const services = [
     details: ["AWS, Azure, Google Cloud", "Data security", "Cost-effective infrastructure"]
   },
   { 
-    title: "Cybersecurity", 
-    description: "Implementing advanced security measures to safeguard digital assets and prevent cyber threats.", 
-    details: ["Threat detection", "Data encryption", "Continuous monitoring"]
-  },
-  { 
     title: "Data Science (DS) & Data Analysis (DA)", 
     description: "Leveraging data to uncover insights, optimize processes, and drive data-driven decision-making.", 
     details: ["Big Data analysis", "Predictive analytics", "Data visualization"]
@@ -59,11 +54,6 @@ const services = [
     details: ["AI-driven automation", "Custom ML models", "Deep Learning (DL)"]
   },
   { 
-    title: "Blockchain Solutions", 
-    description: "Developing secure, decentralized applications leveraging blockchain technology.", 
-    details: ["Smart contracts", "Decentralized applications (DApps)", "Blockchain security"]
-  },
-  { 
     title: "Digital Marketing", 
     description: "Boosting online presence and audience engagement with tailored digital strategies.", 
     details: ["SEO & SEM", "Content marketing", "Social media campaigns"]
@@ -72,12 +62,7 @@ const services = [
     title: "E-commerce Development", 
     description: "Creating high-performance e-commerce platforms for seamless shopping experiences.", 
     details: ["Secure payment integration", "Custom shopping carts", "User-friendly experience"]
-  },
-  { 
-    title: "Technical Consultation", 
-    description: "Providing expert guidance on software development, infrastructure, and technology strategy.", 
-    details: ["Customized IT solutions", "Technology roadmap", "Business transformation"]
-  },
+  }
 ];
 
 const Home = () => {
@@ -97,35 +82,27 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <a href="/get-started" className="get-started-btn">
+      {/* <a href="/get-started" className="get-started-btn">
         Get Started
-      </a>
+      </a> */}
       
       <section id="hero">
         <div className="hero-content">
           <h1 className="animated-heading">
-            Welcome to CBCD COMMUNITY <br />
-            Empowering innovation through technology and creativity.
+            Welcome to <span className="highlight">CBCD COMMUNITY</span> <br />
+            <span className="sub-heading">Empowering innovation through technology  <br /> and creativity.</span>
           </h1>
-          <div className="hero-buttons">
-            <a href="/about" className="btn btn-info">
-              Learn More About Us
-            </a>
-            <a href="/projects" className="btn btn-light">
-              Explore Our Projects
-            </a>
-          </div>
         </div>
         <div className="zigzag"></div>
       </section>
       
       <section className="services-section">
-        <h2 className="services-title">Our Services</h2>
+        <h2 className="services-title">My Services</h2>
         <div className="services-container">
           {services.map((service, index) => (
             <div key={index} className="service-item">
               <div className="service-text">
-                <h3>{service.title}</h3>
+                <h3 className="service-heading">{service.title}</h3>
                 <p>{service.description}</p>
                 <ul className="service-details">
                   {service.details.map((detail, i) => (
