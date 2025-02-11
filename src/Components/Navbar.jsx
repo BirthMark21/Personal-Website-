@@ -8,6 +8,7 @@ import "./nav.css";
 const Navbar = () => {
   const { user } = useContext(EventContext);
   const [userData, setUserData] = useState();
+  const [isNavOpen, setIsNavOpen] = useState(false);  // Track navbar open/close state
   const location = useLocation();
   const navigate = useNavigate();
   const hideNavbar = /\/room/.test(location.pathname);
@@ -26,6 +27,15 @@ const Navbar = () => {
 
   const handleGotoProfile = () => {
     navigate("/profile", { replace: true });
+  };
+
+  // Handle navbar collapse when a link is clicked
+  const handleNavLinkClick = () => {
+    setIsNavOpen(false); // Collapse the navbar
+  };
+
+  const handleToggleNavbar = () => {
+    setIsNavOpen(!isNavOpen);  // Toggle navbar open/close state
   };
 
   if (hideNavbar) {
@@ -48,46 +58,49 @@ const Navbar = () => {
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
+          onClick={handleToggleNavbar}  // Toggle navbar on button click
           aria-controls="navbarSupportedContent"
-          aria-expanded="false"
+          aria-expanded={isNavOpen ? "true" : "false"}  // Adjust aria-expanded for accessibility
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
         {/* Navbar Links */}
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className={`collapse navbar-collapse ${isNavOpen ? "show" : ""}`} id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto me-2 mb-2 mb-lg-0 d-flex align-items-center">
             <li className="nav-item">
-              <NavLink to="/home" className="nav-link">Home</NavLink>
+              <NavLink to="/home" className="nav-link" onClick={handleNavLinkClick}>Home</NavLink>
             </li>
 
             {/* Projects Dropdown */}
             <li className="nav-item position-relative">
-              <NavLink to="/projects" className="nav-link">Projects</NavLink>
+              <NavLink to="/works" className="nav-link" onClick={handleNavLinkClick}>Works</NavLink>
               <div className="position-absolute sub-navbar">
                 <ul className="list-unstyled m-0 p-2">
-                  <li><NavLink to="/projects/projectideas" className="nav-link">Popular Projects</NavLink></li>
-                  <li><NavLink to="/skills/resume" className="nav-link">Resume</NavLink></li>
+                  <li><NavLink to="/projects/projectideas" className="nav-link" onClick={handleNavLinkClick}>Popular Projects</NavLink></li>
+                  <li><NavLink to="/skills/projects" className="nav-link" onClick={handleNavLinkClick}>Projects</NavLink></li>
+                  <li><NavLink to="/skills/resume" className="nav-link" onClick={handleNavLinkClick}>Resume</NavLink></li>
                 </ul>
               </div>
             </li>
 
             {/* Skills Dropdown */}
             <li className="nav-item position-relative">
-              <NavLink to="/skills" className="nav-link">Skills</NavLink>
+              <NavLink to="/skills" className="nav-link" onClick={handleNavLinkClick}>Skills</NavLink>
             </li>
 
             <li className="nav-item">
-              <NavLink to="/about" className="nav-link">About</NavLink>
+              <NavLink to="/about" className="nav-link" onClick={handleNavLinkClick}>About</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/reference" className="nav-link">Reference</NavLink>
+              <NavLink to="/portfolio" className="nav-link" onClick={handleNavLinkClick}>Portfolio</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/contact" className="nav-link">Contact</NavLink>
+              <NavLink to="/reference" className="nav-link" onClick={handleNavLinkClick}>Reference</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/contact" className="nav-link" onClick={handleNavLinkClick}>Contact</NavLink>
             </li>
           </ul>
         </div>

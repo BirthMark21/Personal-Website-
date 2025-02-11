@@ -13,6 +13,7 @@ const ResumePreview = () => {
 
   return (
     <div className="resume-container">
+        
       <header className="resume-header">
         <h1 className="name">Misganaw Mekashaw Tegegne</h1>
         <p className="title">Full Stack Developer | System Analyst | Data Analyst</p>

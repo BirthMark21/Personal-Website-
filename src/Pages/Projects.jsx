@@ -28,6 +28,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects-section">
+       
       <div className="container">
         <h2 className="section-title">My  Projects</h2>
         

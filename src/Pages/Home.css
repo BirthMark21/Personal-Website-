@@ -19,7 +19,7 @@ a {
 
 /* Hero Section */
 #hero {
-  background: url('../img/noe.JPG') no-repeat center center/cover;
+  background: url('../img/dev_fo.JPG') no-repeat center center/cover;
   position: relative;
   min-height: 100vh;
   width: 100%;
@@ -36,13 +36,25 @@ a {
 #hero h1 {
   font-size: 3.5rem;
   font-weight: bold;
-  color: #0de018;
+  color: #bd0c88;
   background: rgba(0, 0, 0, 0.6);
   padding: 15px 20px;
   border-radius: 10px;
   max-width: 90%;
   text-transform: uppercase;
 }
+#hero h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #a80e7a;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  border-radius: 8px;
+  max-width: 80%;
+  text-transform: capitalize;
+  text-align: center;
+}
+
 
 #hero h2 {
   font-size: 2rem;

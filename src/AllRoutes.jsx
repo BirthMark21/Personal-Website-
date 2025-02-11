@@ -17,7 +17,7 @@ import Completedprojects from "./Pages/Completedprojects";
 import Resume from "./Pages/Resume";
 import ProjectIdeas from "./Pages/ProjectIdeas";
 import ScrollToTop from "./Components/ScrollToTop";
-
+import Portfolio from "./Pages/Portfolio";
 import SomeCom from "./Pages/SomeCom";
 import Admin from "./Pages/Admin";
 import SpeakerReg from "./Components/SpeakerReg";
@@ -31,7 +31,7 @@ import CountCard from "./Components/Admin/CountCard";
 import RoomLogin from "./Pages/RoomLogin";
 import Navigation from "./Components/Navigation";
 import DetailAdmin from "./Components/DetailAdmin";
-// import Login from "./Pages/Login";
+import Layout from './Components/Layout';
 // import Signin from "./Pages/Signin";
 // import Profile from "./Pages/Profile";
 
@@ -41,7 +41,7 @@ const AllRoutes = () => {
   return (
     <>
       {/* {!isLoginPage && <Navbar />} */}
-      <Navbar/>
+      <Layout>
       <ScrollToTop />
       <Routes>
       <Route path="/" element={<Home />} />
@@ -51,8 +51,11 @@ const AllRoutes = () => {
         <Route path="/skills" element={<Skills />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/portfolio" element={<Portfolio />} /> 
+
         <Route path="/resume" element={<Resume />} />
         <Route path="/skills/resume" element={<Resume />} /> {/* Route for Resume */}
+        <Route path="/skills/projects" element={<Projects />} /> {/* Route for Resume */}
         <Route path="/projectideas" element={<ProjectIdeas />} />
         <Route path="/projects/completedprojects" element={<Completedprojects />} />
         <Route path="/projects/projectideas" element={<ProjectIdeas />} /> {/* Route for Resume */}
@@ -74,7 +77,8 @@ const AllRoutes = () => {
         {/* <Route path="/signin" element={<Signin />} /> */}
         {/* <Route path="/profile" element={<Profile />} /> */}
       </Routes>
-      <Navigation />
+      </Layout>
+      {/* <Navigation /> */}
       <Footer />
      
     </>

@@ -37,6 +37,7 @@ const CompletedProjects = () => {
 
   return (
     <div className="completed-projects-container">
+      
       <h1 className="title">Completed Projects</h1>
       <div className="projects-grid">
         {completedProjects.map((project, index) => (

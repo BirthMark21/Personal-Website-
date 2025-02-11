@@ -18,7 +18,7 @@ const About = () => {
 
   return (
     <div className="about-container">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="container">
         <div className="row align-items-center">
           {/* About Me Section */}
@@ -26,7 +26,7 @@ const About = () => {
             <div className="content-card animate-card">
               <h1 className="section-title-yellow with-line">About Me</h1>
               {renderTextWithIcons(
-                "Hi, I'm Misganaw Mekashaw, a Junior Full Stack Developer with a Bachelor of Science degree in Computer Science and Engineering from Adama Science and Technology University (ASTU).\nI am passionate about creating innovative, efficient, and impactful software solutions using modern web technologies and data science."
+                "Hi, I'm Misganaw Mekashaw, a Junior Full Stack Developer with a Bachelor of Science degree in Computer Science and Engineering from Adama Science and Technology University (ASTU).\nI am passionate about creating innovative, efficient, and impactful software solutions using modern web technologies , ML , AI and Data science."
               )}
               <button
                 className="action-button"

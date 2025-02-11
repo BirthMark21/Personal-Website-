@@ -6,6 +6,7 @@ const Contact = () => {
   return (
     <section id="contact">
       <div className="contact-container">
+        
         <h1 className="contact-title">Get in Touch</h1>
 
         <div className="contact-grid">

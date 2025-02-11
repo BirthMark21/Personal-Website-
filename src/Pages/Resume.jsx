@@ -9,10 +9,11 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@3.11.174/bui
 
 const ResumePreview = () => {
   // Static URL of the PDF you want to preview (change to your actual URL)
-  const pdfUrl = "/src/pdf/Misganaw_Mekashaw_Tegegne_cv_for Safaricom .pdf"; // or URL: "https://example.com/path/to/your/resume.pdf"
+  const pdfUrl = "/Misganaw_Mekashaw_Tegegne_cv .pdf"; // or URL: "https://example.com/path/to/your/resume.pdf"
 
   return (
     <div className="resume-container">
+        
       <header className="resume-header">
         <h1 className="name">Misganaw Mekashaw Tegegne</h1>
         <p className="title">Full Stack Developer | System Analyst | Data Analyst</p>

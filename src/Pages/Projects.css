@@ -129,16 +129,23 @@
   font-size: 1rem;
   color: #d3d0d0;
 }
-
-/* Responsive Design */
 @media (max-width: 1024px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr); /* 2 Columns on Tablets */
+    justify-items: center; /* Centers items in the grid */
   }
 }
 
 @media (max-width: 768px) {
   .grid-container {
     grid-template-columns: repeat(1, 1fr); /* 1 Column on Mobile */
+    justify-items: center; /* Centers items in the grid */
   }
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centers images horizontally */
 }
