@@ -43,18 +43,6 @@ a {
   max-width: 90%;
   text-transform: uppercase;
 }
-#hero h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #a80e7a;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px 15px;
-  border-radius: 8px;
-  max-width: 80%;
-  text-transform: capitalize;
-  text-align: center;
-}
-
 
 #hero h2 {
   font-size: 2rem;

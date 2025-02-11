@@ -33,6 +33,36 @@ const services = [
     description: "Creating user-friendly mobile applications with robust features and cross-platform compatibility.", 
     details: ["Intuitive UI/UX", "Cross-platform solutions", "Scalable architecture"]
   },
+  { 
+    title: "SEO Optimization", 
+    description: "Enhancing website visibility and search engine ranking through strategic optimization techniques.", 
+    details: ["Keyword research", "On-page SEO", "High-quality backlinks"]
+  },
+  { 
+    title: "Cloud Computing", 
+    description: "Delivering secure and scalable cloud solutions to optimize business operations.", 
+    details: ["AWS, Azure, Google Cloud", "Data security", "Cost-effective infrastructure"]
+  },
+  { 
+    title: "Data Science (DS) & Data Analysis (DA)", 
+    description: "Leveraging data to uncover insights, optimize processes, and drive data-driven decision-making.", 
+    details: ["Big Data analysis", "Predictive analytics", "Data visualization"]
+  },
+  { 
+    title: "Artificial Intelligence (AI) & Machine Learning (ML)", 
+    description: "Building intelligent systems with deep learning, neural networks, and predictive analytics.", 
+    details: ["AI-driven automation", "Custom ML models", "Deep Learning (DL)"]
+  },
+  { 
+    title: "Digital Marketing", 
+    description: "Boosting online presence and audience engagement with tailored digital strategies.", 
+    details: ["SEO & SEM", "Content marketing", "Social media campaigns"]
+  },
+  { 
+    title: "E-commerce Development", 
+    description: "Creating high-performance e-commerce platforms for seamless shopping experiences.", 
+    details: ["Secure payment integration", "Custom shopping carts", "User-friendly experience"]
+  }
 ];
 
 const Home = () => {
@@ -51,10 +81,15 @@ const Home = () => {
 
   return (
     <>
+      <Navbar />
+      
+      
       <section id="hero">
         <div className="hero-content">
-          <h1 className="animated-heading">Welcome To <span className="highlight">Cbcd Community</span></h1>
-          <h2 className="sub-heading">Empowering Innovation Through Technology<br />And Creativity.</h2>
+          <h1 className="animated-heading">
+            Welcome to <span className="highlight">CBCD COMMUNITY</span> <br />
+            <span className="sub-heading">Empowering innovation through technology  <br /> and creativity.</span>
+          </h1>
         </div>
         <div className="zigzag"></div>
       </section>
