@@ -50,37 +50,37 @@ const EventProvider = ({ children }) => {
     fetchData();
   }, []);
 
-  const fetchEvents = async () => {
-    const res = await fetch("http://127.0.0.1:8000/api/events/");
-    if (!res.ok) {
-      throw new Error("Failed to fetch events");
-    }
-    return res.json();
-  };
+  // const fetchEvents = async () => {
+  //   const res = await fetch("http://127.0.0.1:8000/api/events/");
+  //   if (!res.ok) {
+  //     throw new Error("Failed to fetch events");
+  //   }
+  //   return res.json();
+  // };
 
-  const fetchSpeakers = async () => {
-    const res = await fetch("http://127.0.0.1:8000/api/speakers/");
-    if (!res.ok) {
-      throw new Error("Failed to fetch speakers");
-    }
-    return res.json();
-  };
+  // const fetchSpeakers = async () => {
+  //   const res = await fetch("http://127.0.0.1:8000/api/speakers/");
+  //   if (!res.ok) {
+  //     throw new Error("Failed to fetch speakers");
+  //   }
+  //   return res.json();
+  // };
 
-  const fetchSponsors = async () => {
-    const res = await fetch("http://127.0.0.1:8000/api/sponsors/");
-    if (!res.ok) {
-      throw new Error("Failed to fetch sponsors");
-    }
-    return res.json();
-  };
+  // const fetchSponsors = async () => {
+  //   const res = await fetch("http://127.0.0.1:8000/api/sponsors/");
+  //   if (!res.ok) {
+  //     throw new Error("Failed to fetch sponsors");
+  //   }
+  //   return res.json();
+  // };
 
-  const fetchAttendees = async () => {
-    const res = await fetch("http://127.0.0.1:8000/api/attendees/");
-    if (!res.ok) {
-      throw new Error("Failed to fetch attendees");
-    }
-    return res.json();
-  };
+  // const fetchAttendees = async () => {
+  //   const res = await fetch("http://127.0.0.1:8000/api/attendees/");
+  //   if (!res.ok) {
+  //     throw new Error("Failed to fetch attendees");
+  //   }
+  //   return res.json();
+  // };
 
   // const fetchUsers = async () => {
   //   const res = await fetch(`http://127.0.0.1:8000/api/users/${user.user_id}/`);

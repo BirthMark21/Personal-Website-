@@ -1,9 +1,9 @@
 /* Apply Black Background to the Whole Page */
-body {
+/* body {
   background-color: #000000;
   margin: 0;
   padding: 0;
-}
+} */
 
 /* Navbar Styles */
 .navbar {
@@ -13,7 +13,7 @@ body {
   align-items: center;
   height: 60px;
   position: relative;
-  z-index: 1000; /* Ensure navbar stays on top */
+  z-index: 1050;/* Ensure navbar stays on top */
 }
 
 /* Navbar Logo Styling */
