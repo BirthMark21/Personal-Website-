@@ -7,7 +7,7 @@ body {
 
 /* Navbar Styles */
 .navbar {
-  background-color: rgb(43, 16, 192) !important;
+  background-color:  rgba(43, 16, 192, 0.95) !important;;
   padding: 10px 20px;
   display: flex;
   align-items: center;
