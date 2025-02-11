@@ -81,7 +81,7 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       
       
       <section id="hero">
