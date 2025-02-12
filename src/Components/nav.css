@@ -1,19 +1,25 @@
 /* Apply Black Background to the Whole Page */
-/* body {
+body {
   background-color: #000000;
   margin: 0;
   padding: 0;
-} */
+}
 
-/* Navbar Styles */
+/* Navbar */
 .navbar {
-  background-color:  rgba(43, 16, 192, 0.95) !important;;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  height: 60px;
-  position: relative;
-  z-index: 1050;/* Ensure navbar stays on top */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 1000; /* Ensures the navbar is above other content */
+}
+
+.navbar-nav .nav-item {
+  margin: 5px 10px;
+  color: white;
+  background-color: transparent;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 /* Navbar Logo Styling */
