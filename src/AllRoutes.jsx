@@ -40,7 +40,7 @@ const AllRoutes = () => {
   //   window.location.pathname === "/" || window.location.pathname === "/signin";
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar /> 
       <Layout>
       <ScrollToTop />
       <Routes>
