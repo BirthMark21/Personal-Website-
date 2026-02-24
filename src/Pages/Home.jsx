@@ -1,129 +1,185 @@
-import React, { useEffect, useRef } from "react";  
-import Navbar from "../Components/Navbar";
+import React from "react";  
 import "./Home.css";
-import handwritingSound from "../img/handwriting.mp3";
+import { Link } from "react-router-dom";
+import { FaBrain, FaRobot, FaChartLine, FaDatabase, FaCode, FaLightbulb } from "react-icons/fa";
+import { SiTensorflow, SiPytorch, SiOpenai } from "react-icons/si";
 
-// Import project images
-import project1 from "../img/project-1 (1).png";
-import project2 from "../img/project-1 (2).png";
-import project3 from "../img/project-1 (3).png";
-import project4 from "../img/project-1 (4).png";
-import project5 from "../img/project-1 (5).png";
-import project6 from "../img/project-1 (6).png";
-import project7 from "../img/project-1 (7).png";
-import project8 from "../img/project-1 (8).png";
-import project9 from "../img/project-1 (9).png";
-import project10 from "../img/project-1 (10).png";
-
-// Import social media icons
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaGithub, FaTelegram } from "react-icons/fa";
-
-const projectImages = [
-  project1, project2, project3, project4, project5, project6, project7, project8, project9, project10,
-];
-
-const services = [
-  { 
-    title: "Web Development", 
-    description: "Designing and developing responsive, high-performance websites using modern technologies.", 
-    details: ["Responsive design", "Modern frameworks", "Optimized performance"]
-  },
-  { 
-    title: "App Development", 
-    description: "Creating user-friendly mobile applications with robust features and cross-platform compatibility.", 
-    details: ["Intuitive UI/UX", "Cross-platform solutions", "Scalable architecture"]
-  },
-  { 
-    title: "SEO Optimization", 
-    description: "Enhancing website visibility and search engine ranking through strategic optimization techniques.", 
-    details: ["Keyword research", "On-page SEO", "High-quality backlinks"]
-  },
-  { 
-    title: "Cloud Computing", 
-    description: "Delivering secure and scalable cloud solutions to optimize business operations.", 
-    details: ["AWS, Azure, Google Cloud", "Data security", "Cost-effective infrastructure"]
-  },
-  { 
-    title: "Data Science (DS) & Data Analysis (DA)", 
-    description: "Leveraging data to uncover insights, optimize processes, and drive data-driven decision-making.", 
-    details: ["Big Data analysis", "Predictive analytics", "Data visualization"]
-  },
-  { 
-    title: "Artificial Intelligence (AI) & Machine Learning (ML)", 
-    description: "Building intelligent systems with deep learning, neural networks, and predictive analytics.", 
-    details: ["AI-driven automation", "Custom ML models", "Deep Learning (DL)"]
-  },
-  { 
-    title: "Digital Marketing", 
-    description: "Boosting online presence and audience engagement with tailored digital strategies.", 
-    details: ["SEO & SEM", "Content marketing", "Social media campaigns"]
-  },
-  { 
-    title: "E-commerce Development", 
-    description: "Creating high-performance e-commerce platforms for seamless shopping experiences.", 
-    details: ["Secure payment integration", "Custom shopping carts", "User-friendly experience"]
-  }
-];
+// Import actual page components
+import About from "./About";
+import Skills from "./Skills";
+import Projects from "./Projects";
+import Experience from "./Experience";
+import Contact from "./Contact";
+import Testimonials from "../Components/Testimonials";
+import CaseStudy from "../Components/CaseStudy";
 
 const Home = () => {
-  const audioRef = useRef(new Audio(handwritingSound));
+  const aiCapabilities = [
+    {
+      icon: <FaBrain />,
+      title: "Machine Learning",
+      description: "Building predictive models and ML pipelines for real-world applications"
+    },
+    {
+      icon: <FaRobot />,
+      title: "Generative AI",
+      description: "Developing LLM-powered applications and conversational AI systems"
+    },
+    {
+      icon: <FaChartLine />,
+      title: "Data Analytics",
+      description: "Extracting insights from complex datasets with advanced analytics"
+    },
+    {
+      icon: <FaDatabase />,
+      title: "ML Operations",
+      description: "Deploying and scaling ML models with feature stores and pipelines"
+    }
+  ];
 
-  useEffect(() => {
-    const playAudio = async () => {
-      try {
-        await audioRef.current.play();
-      } catch (error) {
-        console.error("Autoplay blocked:", error);
-      }
-    };
-    playAudio();
-  }, []);
+  const impactMetrics = [
+    { value: "1M+", label: "Customer Profiles Processed", icon: "👥" },
+    { value: "<10ms", label: "Feature Serving Latency", icon: "⚡" },
+    { value: "100+", label: "Dynamic Segments Supported", icon: "🎯" },
+    { value: "3+", label: "Years ML Experience", icon: "📊" }
+  ];
+
+  const techStack = [
+    { icon: <SiTensorflow />, name: "TensorFlow" },
+    { icon: <SiPytorch />, name: "PyTorch" },
+    { icon: <SiOpenai />, name: "OpenAI" },
+    { icon: <FaCode />, name: "FastAPI" }
+  ];
 
   return (
     <>
-      <Navbar />
-      
-      
+      {/* Hero Section */}
       <section id="hero">
         <div className="hero-content">
+          <div className="hero-badge">
+            <FaLightbulb /> AI & Machine Learning Engineer
+          </div>
           <h1 className="animated-heading">
-            Welcome to <span className="highlight">CBCD COMMUNITY</span> <br />
-            <span className="sub-heading">Empowering innovation through technology  <br /> and creativity.</span>
+            Building Intelligent Systems with <br />
+            <span className="highlight">AI & Generative AI</span>
           </h1>
+          <p className="hero-description">
+            Specializing in Machine Learning, NLP, Computer Vision, and LLM-powered applications. 
+            Transforming data into intelligent solutions for e-commerce, banking, and enterprise systems.
+          </p>
+          <div className="hero-actions">
+            <a href="#about" className="btn-primary">
+              <FaRobot /> Learn More
+            </a>
+            <a href="#contact" className="btn-secondary">
+              Let's Collaborate
+            </a>
+          </div>
+          
+          <div className="tech-stack">
+            {techStack.map((tech, index) => (
+              <div key={index} className="tech-item" title={tech.name}>
+                {tech.icon}
+              </div>
+            ))}
+          </div>
         </div>
         <div className="zigzag"></div>
       </section>
       
-      <section className="services-section">
-        <h2 className="services-title">My Services</h2>
-        <div className="services-container">
-          {services.map((service, index) => (
-            <div key={index} className="service-item">
-              <div className="service-text">
-                <h3 className="service-heading">{service.title}</h3>
-                <p>{service.description}</p>
-                <ul className="service-details">
-                  {service.details.map((detail, i) => (
-                    <li key={i}>
-                      <span className="bullet-icon">✔</span> {detail}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="service-card">
-                <div className="card-title">{service.title}</div>
-                <div className="card-image-wrapper">
-                  <img 
-                    src={projectImages[index % projectImages.length]} 
-                    alt={service.title} 
-                    className="service-img" 
-                  />
-                </div>
-              </div>
+      {/* Impact Metrics Section */}
+      <section className="impact-metrics-section">
+        <h2 className="section-title">Impact & Performance</h2>
+        <div className="metrics-grid">
+          {impactMetrics.map((metric, index) => (
+            <div key={index} className="metric-card">
+              <span className="metric-icon">{metric.icon}</span>
+              <h3 className="metric-value">{metric.value}</h3>
+              <p className="metric-label">{metric.label}</p>
             </div>
           ))}
         </div>
       </section>
+
+      {/* Capabilities Section */}
+      <section className="capabilities-section">
+        <h2 className="section-title">AI & ML Capabilities</h2>
+        <div className="capabilities-grid">
+          {aiCapabilities.map((capability, index) => (
+            <div key={index} className="capability-card">
+              <div className="capability-icon">{capability.icon}</div>
+              <h3>{capability.title}</h3>
+              <p>{capability.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* About Section - Using actual About component */}
+      <div id="about">
+        <About />
+      </div>
+
+      {/* Skills Section - Using actual Skills component */}
+      <div id="skills">
+        <Skills />
+      </div>
+
+      {/* Experience Section - Using actual Experience component */}
+      <div id="experience">
+        <Experience />
+      </div>
+
+      {/* Projects Section - Using actual Projects component */}
+      <div id="projects">
+        <Projects />
+      </div>
+
+      {/* Case Study Section */}
+      <CaseStudy />
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* GitHub Stats Section */}
+      <section className="github-stats-section">
+        <div className="github-container">
+          <h2 className="section-title">
+            Open Source <span className="highlight">Contributions</span>
+          </h2>
+          <p className="section-subtitle">Building in public and contributing to the community</p>
+          
+          <div className="github-stats-grid">
+            <a 
+              href="https://github.com/BirthMark21" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="github-stat-card"
+            >
+              <FaCode className="stat-icon" />
+              <h3>View GitHub Profile</h3>
+              <p>Check out my repositories and contributions</p>
+            </a>
+            
+            <div className="github-stat-card">
+              <FaDatabase className="stat-icon" />
+              <h3>12+ Projects</h3>
+              <p>Production-ready applications and ML systems</p>
+            </div>
+            
+            <div className="github-stat-card">
+              <FaLightbulb className="stat-icon" />
+              <h3>Open Source</h3>
+              <p>Contributing to ML and banking tech communities</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section - Using actual Contact component */}
+      <div id="contact">
+        <Contact />
+      </div>
     </>
   );
 };

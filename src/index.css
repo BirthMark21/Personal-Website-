@@ -1,41 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap');
+@import './styles/theme.css';
 
-
-:root {
-  --c-dark: #212529;
-  --c-brand: #4e57d4;
-  --c-brand-light: #6970dd;
-  --c-brand-rgb: 78, 87, 212;
-  --c-body: #727272;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #F8F9FA;
-  height: 100dvh;
+  background: var(--c-light);
+  color: var(--c-body);
+  line-height: 1.7;
+  overflow-x: hidden;
 }
 
 #hero {
   padding-top: 10rem;
-  /* background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url('./img/back_banner.webp'); */
-  /* background: linear-gradient(rgba(var(--c-brand-rgb), 0.507), rgba(var(--c-brand-rgb), 0.438)), url('./img/ethio1.jpg'); */
   background-position: center;
   background-size: cover;
   animation: fadeIn 1s ease-in-out forwards;
-  margin-top: 0%;
-}
-
-#event-detail {
-  /* background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url('./img/back_banner.webp'); */
-  animation: fadeIn 1s ease-in-out forwards;
+  margin-top: 0;
 }
 
 #myNav {
-  background-color: #fff;
-  height: 65px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  height: 70px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+#myNav.scrolled {
+  box-shadow: var(--shadow-md);
 }
 
 .navbar-light .navbar-brand {

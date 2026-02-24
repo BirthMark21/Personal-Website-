@@ -1,108 +1,165 @@
-/* Apply Black Background to the Whole Page */
+/* Modern Navbar Styles */
 body {
-  background-color: #000000;
   margin: 0;
   padding: 0;
 }
 
-/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: black;
-  z-index: 1000; /* Ensures the navbar is above other content */
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navbar-nav .nav-item {
-  margin: 5px 10px;
-  color: white;
-  background-color: transparent;
-  padding: 5px 10px;
-  border-radius: 5px;
+.navbar.scrolled {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* Navbar Logo Styling */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--c-dark, #0a0e27) !important;
+  transition: transform 0.3s ease;
+  margin-left: 120px;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
 .navbar-logo {
-  max-height: 40px;
-  width: auto;
+  max-height: 50px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
   vertical-align: middle;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: filter 0.3s ease;
+  border: 2px solid rgba(99, 102, 241, 0.2);
 }
 
-/* Navbar Links */
+.navbar-logo:hover {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
 .navbar .nav-link {
-  color: white !important;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 10px 15px;
+  color: var(--c-body, #64748b) !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 10px 18px !important;
+  margin: 0 4px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar .nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: transform 0.3s ease;
 }
 
 .navbar .nav-link:hover {
-  color: #f8f9fa !important;
+  color: var(--c-brand, #6366f1) !important;
+  background: rgba(99, 102, 241, 0.08);
 }
 
-/* Navbar Toggler */
+.navbar .nav-link:hover::before {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.navbar .nav-link.active {
+  color: var(--c-brand, #6366f1) !important;
+  background: rgba(99, 102, 241, 0.12);
+  font-weight: 600;
+}
+
 .navbar-toggler {
   border: none;
   outline: none;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.navbar-toggler:hover {
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
 }
 
 .navbar-toggler-icon {
-  background-color: white;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(99, 102, 241, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* Sub-navbar: Hidden by default */
+/* Dropdown Styles */
 .sub-navbar {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 200px;
-  background-color: #0d3faa;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 220px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  padding: 8px;
+  margin-top: 8px;
   z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Show sub-navbar on hover */
 .nav-item.position-relative:hover .sub-navbar {
   display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Style for sub-navbar links */
 .sub-navbar .nav-link {
-  color: white !important;
-  padding: 10px 15px;
+  color: var(--c-body, #64748b) !important;
+  padding: 12px 16px !important;
   display: block;
   font-size: 0.9rem;
+  border-radius: 8px;
+  margin: 2px 0;
+  transition: all 0.3s ease;
 }
 
 .sub-navbar .nav-link:hover {
-  background-color: #0056b3;
-  border-radius: 5px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white !important;
+  transform: translateX(4px);
 }
 
-/* Tablet and Mobile View */
-@media (max-width: 768px) {
-  /* Ensure navbar background is applied */
+/* Mobile Responsive */
+@media (max-width: 991px) {
   .navbar {
-    background-color: rgb(27, 30, 218) !important;
-    padding: 10px;
-  }
-
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  .navbar-logo {
-    max-height: 35px;
+    padding: 12px 0;
   }
 
   .navbar-collapse {
-    background-color: black;
-    text-align: center;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    margin-top: 12px;
+    padding: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   }
 
   .navbar-nav {
@@ -110,56 +167,38 @@ body {
   }
 
   .nav-item {
-    margin: 5px 0;
+    margin: 4px 0;
   }
 
-  /* Ensure sub-navbar is hidden in mobile until hovered */
+  .navbar .nav-link {
+    padding: 12px 16px !important;
+    margin: 2px 0;
+  }
+
   .sub-navbar {
-    position: absolute;
-    background-color: rgb(0, 0, 0);
-    display: none;
-    right: 0;  /* Change from 'left: 0' to 'right: 0' */
+    position: static;
+    background: rgba(99, 102, 241, 0.05);
+    margin-top: 8px;
+    margin-left: 16px;
+    box-shadow: none;
+    opacity: 1;
+    transform: none;
   }
 
   .nav-item.position-relative:hover .sub-navbar {
     display: block;
-  }
-
-  /* Make navbar toggler and menu items visible on mobile */
-  .navbar-toggler-icon {
-    background-color: white;
-  }
-
-  /* Adjust font size for mobile */
-  .nav-link {
-    font-size: 1rem;
   }
 }
 
-@media (max-width: 992px) {
-  /* Adjust navbar for tablets */
-  .navbar {
-    padding: 15px;
-    height: auto;
+@media (max-width: 768px) {
+  .navbar-logo {
+    max-height: 40px;
+    width: 40px;
+    height: 40px;
   }
 
-  /* Ensure navbar background stays */
-  .navbar-collapse {
-    background-color: rgb(39, 79, 189);
-    width: 23px;
-  }
-
-  .sub-navbar {
-    position: absolute;
-    background-color: rgb(154, 91, 184);
-    display: none;
-  }
-
-  .nav-item.position-relative:hover .sub-navbar {
-    display: block;
-  }
-
-  .nav-link {
-    font-size: 1rem;
+  .navbar-brand {
+    font-size: 1.25rem;
+    margin-left: 20px;
   }
 }

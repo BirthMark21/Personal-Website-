@@ -1,3 +1,9 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://misganawmekashaw.com/sitemap.xml
+
+# Disallow admin or private pages (if any)
+# Disallow: /admin/

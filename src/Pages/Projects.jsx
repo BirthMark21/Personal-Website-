@@ -1,68 +1,84 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import project1 from "../img/project-1 (27).png";
-import project2 from "../img/project-1 (2).png";
-import project3 from "../img/project-1 (3).png";
-import project4 from "../img/project-1 (4).png";
-import project5 from "../img/project-1 (5).png";
-import project6 from "../img/project-1 (6).png";
+import ProjectCard from "../components/ui/ProjectCard";
+import { projects } from "../data/projects";
+import "./Projects.css";
+
+// Import main project images
+import project1 from "../img/context_adaptive_intent_fusion_caif_ai_architecture.jpg";
+import project2 from "../img/daily_orders_holiday_spikes_regular_vs_holiday_nov2023.jpg";
+import project3 from "../img/customer_segment_overview_pie_bar_dashboard.jpg";
+import project4 from "../img/lightgbm_potato_price_forecast_actual_vs_predicted.jpg";
+import project5 from "../img/project-1 (6).png";
+import project6 from "../img/project-1 (5).png";
 import project7 from "../img/project-1 (7).png";
 import project8 from "../img/project-1 (8).png";
 import project9 from "../img/project-1 (9).png";
-import project10 from "../img/project-1 (10).png";
-import "./Projects.css";
+import project10 from "../img/dcdce-engine.png";
+import project11 from "../img/product-standardization-pipeline.png";
+import project12 from "../img/chipchip_2year_anniversary_celebration.jpg";
+import project13 from "../img/project-1 (1).png";
+
+// Import gallery images
+import caifArchitecture from "../img/context_adaptive_intent_fusion_caif_ai_architecture.jpg";
+import chipchip2years from "../img/chipchip_2year_anniversary_celebration.jpg";
+import ordersHolidayNov from "../img/daily_orders_holiday_spikes_regular_vs_holiday_nov2023.jpg";
+import ordersHolidayOct from "../img/daily_orders_holiday_spikes_regular_vs_holiday_oct202.jpg";
+import ordersHolidayBreakdown from "../img/daily_orders_holiday_spikes_pre_holiday_post_breakdown.jpg";
+import lightgbmForecast from "../img/lightgbm_potato_price_forecast_actual_vs_predicted.jpg";
+import crossElasticity from "../img/cross_elasticity_demand_heatmap_discounting.jpg";
+import deliverySpeed from "../img/delivery_speed_effect_on_aov_by_customer_persona.jpg";
+import orderDistribution from "../img/order_distribution_delivery_windows_by_persona.jpg";
+import segmentOverview from "../img/customer_segment_overview_pie_bar_dashboard.jpg";
+import segmentGrowth from "../img/customer_segment_growth_over_time_stacked_area.jpg";
+import rfmSegment from "../img/rfm_segment_purchase_by_day_of_week.jpg";
+
+const projectImages = {
+  "context_adaptive_intent_fusion_caif_ai_architecture.jpg": project1,
+  "daily_orders_holiday_spikes_regular_vs_holiday_nov2023.jpg": project2,
+  "customer_segment_overview_pie_bar_dashboard.jpg": project3,
+  "lightgbm_potato_price_forecast_actual_vs_predicted.jpg": project4,
+  "project-1 (6).png": project5,
+  "project-1 (5).png": project6,
+  "project-1 (7).png": project7,
+  "project-1 (8).png": project8,
+  "project-1 (9).png": project9,
+  "dcdce-engine.png": project10,
+  "product-standardization-pipeline.png": project11,
+  "chipchip_2year_anniversary_celebration.jpg": project12,
+  "project-1 (1).png": project13
+};
+
+const galleryImages = {
+  "context_adaptive_intent_fusion_caif_ai_architecture.jpg": caifArchitecture,
+  "chipchip_2year_anniversary_celebration.jpg": chipchip2years,
+  "daily_orders_holiday_spikes_regular_vs_holiday_nov2023.jpg": ordersHolidayNov,
+  "daily_orders_holiday_spikes_regular_vs_holiday_oct202.jpg": ordersHolidayOct,
+  "daily_orders_holiday_spikes_pre_holiday_post_breakdown.jpg": ordersHolidayBreakdown,
+  "lightgbm_potato_price_forecast_actual_vs_predicted.jpg": lightgbmForecast,
+  "cross_elasticity_demand_heatmap_discounting.jpg": crossElasticity,
+  "delivery_speed_effect_on_aov_by_customer_persona.jpg": deliverySpeed,
+  "order_distribution_delivery_windows_by_persona.jpg": orderDistribution,
+  "customer_segment_overview_pie_bar_dashboard.jpg": segmentOverview,
+  "customer_segment_growth_over_time_stacked_area.jpg": segmentGrowth,
+  "rfm_segment_purchase_by_day_of_week.jpg": rfmSegment
+};
 
 const Projects = () => {
-  const projects = [
-    { id: 1, title: "Project 1", description: "Explore innovative solutions in Project 1.", link: "/projects/27", image: project1 },
-    { id: 2, title: "Project 2", description: "Dive into the development of Project 2.", link: "/projects/2", image: project2 },
-    { id: 3, title: "Project 3", description: "Revolutionary ideas showcased in Project 3.", link: "/projects/3", image: project3 },
-    { id: 4, title: "Project 4", description: "Innovative technology behind Project 4.", link: "/projects/4", image: project4 },
-    { id: 5, title: "Project 5", description: "A closer look at the details of Project 5.", link: "/projects/5", image: project5 },
-    { id: 6, title: "Project 6", description: "Next-gen innovations in Project 6.", link: "/projects/6", image: project6 },
-    { id: 7, title: "Project 7", description: "Unique concepts featured in Project 7.", link: "/projects/7", image: project7 },
-    { id: 8, title: "Project 8", description: "Tech-driven solutions in Project 8.", link: "/projects/8", image: project8 },
-    { id: 9, title: "Project 9", description: "Breakthrough ideas in Project 9.", link: "/projects/9", image: project9 },
-    { id: 10, title: "Project 10", description: "Advanced systems in Project 10.", link: "/projects/10", image: project10 },
-  ];
-
   return (
     <section id="projects" className="projects-section">
-       
       <div className="container">
-        <h2 className="section-title">My  Projects</h2>
+        <h2 className="section-title">My Projects</h2>
+        <p className="section-subtitle">A showcase of AI/ML systems, banking intelligence platforms, and full-stack applications</p>
         
-        {/* Circular Counters */}
-        <div className="counters">
-          <div className="counter">
-            <div className="circle">20+</div>
-            <p>Project Ideas</p>
-          </div>
-          <div className="counter">
-            <div className="circle">4</div>
-            <p>Completed Projects</p>
-          </div>
-          <div className="counter">
-            <div className="circle">6</div>
-            <p>Ongoing Projects</p>
-          </div>
-        </div>
-        
-        {/* Project Cards */}
+        {/* Project Grid */}
         <div className="grid-container">
           {projects.map((project) => (
-            <div className="project-card" key={project.id}>
-              <div className="card-image">
-                <img src={project.image} alt={project.title} />
-              </div>
-              <div className="card-content">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <Link to={project.link} className="btn btn-primary">
-                  View Project
-                </Link>
-              </div>
-            </div>
+            <ProjectCard 
+              key={project.id}
+              project={project}
+              imageSrc={projectImages[project.image]}
+              galleryImages={galleryImages}
+            />
           ))}
         </div>
       </div>

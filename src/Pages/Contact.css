@@ -1,24 +1,12 @@
 /* Contact Page Styling */
 #contact {
-  background: url('../img/misganaw_logo.png') no-repeat center center; /* Add background image */
-  background-size: cover;
-  padding: 60px 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0e27 0%, #1e293b 100%);
+  padding: 120px 20px 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-}
-
-/* Dark Overlay for better text visibility */
-#contact::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-  z-index: -1; /* Place overlay behind content */
 }
 
 /* Container */
@@ -27,15 +15,15 @@
   width: 100%;
   text-align: center;
   position: relative;
-  z-index: 1; /* Ensure container is above the overlay */
+  z-index: 1;
 }
 
 /* Section Title */
 .contact-title {
-  font-size: 36px;
-  font-weight: bold;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   z-index: 1;
 }
 
@@ -50,36 +38,51 @@
 }
 
 .contact-card {
-  background: white;
-  border-radius: 10px;
-  padding: 25px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   text-align: left;
   position: relative;
   z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+  border-color: rgba(99, 102, 241, 0.3);
 }
 
 .contact-subtitle {
-  font-size: 24px;
-  color: #2d9c9c;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   z-index: 1;
 }
 
 /* Contact Details Styling */
 .contact-card p {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #e2e8f0;
+  margin-bottom: 12px;
 }
 
 .contact-card a {
-  color: #6b46c1;
+  color: #a5b4fc;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .contact-card a:hover {
+  color: #667eea;
   text-decoration: underline;
 }
 
@@ -92,26 +95,29 @@
 .input-group input,
 .input-group textarea {
   width: 100%;
-  padding: 12px;
-  border: 2px solid #ddd;
-  border-radius: 5px;
+  padding: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
   font-size: 16px;
-  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
 .input-group label {
   position: absolute;
-  left: 12px;
-  top: 14px;
-  color: #888;
+  left: 14px;
+  top: 16px;
+  color: #94a3b8;
   font-size: 16px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
   pointer-events: none;
 }
 
 .input-group input:focus,
 .input-group textarea:focus {
-  border-color: #6b46c1;
+  border-color: #667eea;
+  background: rgba(255, 255, 255, 0.08);
   outline: none;
 }
 
@@ -120,27 +126,30 @@
 .input-group input:not(:placeholder-shown) + label,
 .input-group textarea:not(:placeholder-shown) + label {
   top: -10px;
-  left: 10px;
-  background: white;
-  padding: 0 5px;
+  left: 12px;
+  background: #0a0e27;
+  padding: 0 8px;
   font-size: 14px;
-  color: #6b46c1;
+  color: #a5b4fc;
 }
 
 /* Contact Button */
 .contact-button {
-  background: #6b46c1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  padding: 12px 0;
+  padding: 14px 0;
   border: none;
-  border-radius: 5px;
-  font-size: 18px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
 }
 
 .contact-button:hover {
-  background: #553c9a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
 }
 
 /* Map Styling */
@@ -154,25 +163,28 @@
 /* Bottom Navigation Bar */
 .bottom-nav {
   width: 100%;
-  padding: 10px 0;
+  padding: 20px 0;
   text-align: center;
   position: relative;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .nav-button {
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   text-decoration: none;
-  font-weight: bold;
-  padding: 8px 20px;
-  border-radius: 5px;
-  background: #6b46c1;
+  font-weight: 700;
+  padding: 12px 32px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
 }
 
 .nav-button:hover {
-  background: #553c9a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
 }
 
 /* Responsive Design */

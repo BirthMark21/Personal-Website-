@@ -26,7 +26,7 @@ const About = () => {
             <div className="content-card animate-card">
               <h1 className="section-title-yellow with-line">About Me</h1>
               {renderTextWithIcons(
-                "Hi, I'm Misganaw Mekashaw, a Junior Full Stack Developer with a Bachelor of Science degree in Computer Science and Engineering from Adama Science and Technology University (ASTU).\nI am passionate about creating innovative, efficient, and impactful software solutions using modern web technologies , ML , AI and Data science."
+                "Hi, I'm Misganaw Mekashaw, a Machine Learning Engineer | Data Scientist | GenAI specialist with a Bachelor of Science degree in Computer Science and Engineering from Adama Science and Technology University (ASTU).\nI am passionate about creating innovative, efficient, and impactful software solutions using modern web technologies, ML, AI and Data Science."
               )}
               <button
                 className="action-button"

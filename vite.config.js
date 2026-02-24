@@ -4,13 +4,11 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    https: {
-      key: './frontend2-privateKey.key',
-      cert: './frontend2.crt',
-    },
+    port: 5173,
+    open: true
   },
   build: {
-    outDir: 'build',
+    outDir: 'dist',
   },
   optimizeDeps: {
     include: ['react', 'react-dom'],

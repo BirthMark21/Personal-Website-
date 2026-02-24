@@ -11,3 +11,9 @@ dist/
 
 frontend2-privateKey.key
 frontend2.crt
+
+# Ignore all .md and .MD files except README
+*.md
+*.MD
+!README.md
+!README.MD
