@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { FaExternalLinkAlt, FaGithub, FaImages } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaImages } from 'react-icons/fa';
 import './ProjectCard.css';
 
 const ProjectCard = ({ project, imageSrc, galleryImages }) => {
-  const { title, description, technologies, demoUrl, codeUrl, category, gallery } = project;
+  const { title, description, technologies, demoUrl, category, gallery } = project;
   const [showGallery, setShowGallery] = useState(false);
 
   return (
@@ -61,16 +61,6 @@ const ProjectCard = ({ project, imageSrc, galleryImages }) => {
               className="project-btn demo-btn"
             >
               <FaExternalLinkAlt /> Live Demo
-            </a>
-          )}
-          {codeUrl && (
-            <a 
-              href={codeUrl} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="project-btn code-btn"
-            >
-              <FaGithub /> View Code
             </a>
           )}
         </div>

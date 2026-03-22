@@ -172,22 +172,6 @@ export const projects = [
   },
   {
     id: 12,
-    title: "ChipChip Social E-Commerce",
-    description: "Full-stack social e-commerce platform with AI-powered features, serving customers for 2+ years with comprehensive analytics and personalization.",
-    technologies: ["React", "Django", "PostgreSQL", "AI Integration", "Real-time Analytics"],
-    demoUrl: "https://chipchip.social/",
-    codeUrl: "https://github.com/BirthMark21/chipchip",
-    image: "chipchip_2year_anniversary_celebration.jpg",
-    type: "web",
-    impact: {
-      users: "10K+ active users",
-      performance: "2+ years in production",
-      business: "Multi-channel commerce platform"
-    },
-    gallery: ["chipchip_2year_anniversary_celebration.jpg"]
-  },
-  {
-    id: 13,
     title: "EthioHandouts Platform",
     description: "Educational resource sharing platform for Ethiopian students.",
     technologies: ["React", "Node.js", "MongoDB", "Express"],
