@@ -1,4 +1,4 @@
-# CBCD Community - Personal Portfolio Website
+# Misganaw M - Personal Portfolio Website
 
 A modern, responsive portfolio website showcasing professional services, projects, skills, and experience.
 
@@ -225,8 +225,17 @@ npm run build
 npm run deploy
 ```
 
+### Vercel (Primary Deployment)
+
+The site is deployed on Vercel. To deploy:
+
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run: `vercel`
+3. Follow the prompts
+
+Or connect your GitHub repository to Vercel for automatic deployments.
+
 ### Other Platforms
-- **Vercel**: Connect GitHub repo
 - **Netlify**: Drag & drop `dist` folder
 - **AWS S3**: Upload `dist` folder
 
@@ -236,8 +245,8 @@ This project is open source and available under the MIT License.
 
 ## 👤 Author
 
-**Misganaw Mekashaw**
-- Portfolio: [CBCD Community](https://birthmark21.github.io/Personal-Website-)
+**Misganaw M**
+- Portfolio: [Misganaw M](https://misganawm.vercel.app)
 - GitHub: [@birthmark21](https://github.com/birthmark21)
 
 ## 🤝 Contributing

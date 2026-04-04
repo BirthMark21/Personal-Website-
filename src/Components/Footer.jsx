@@ -5,10 +5,10 @@ import './Footer.css';  // Assuming you have a separate CSS file for Footer styl
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2025 CBCD COMMUNITY | All Rights Reserved</p>
+      <p>&copy; 2025 Misganaw M | All Rights Reserved</p>
       <p>
-        <a href="https://cbcdcommunity.com" target="_blank" rel="noopener noreferrer">
-          CBCD Community 2025
+        <a href="https://misganawm.vercel.app" target="_blank" rel="noopener noreferrer">
+          Misganaw M 2025
         </a>
       </p>
       <div className="social-media-links">

@@ -33,7 +33,7 @@ const Navbar = () => {
         <NavLink to="/" className="navbar-brand fw-bold">
           <img 
             src={logo} 
-            alt="CBCD Logo" 
+            alt="Misganaw M Logo" 
             className="navbar-logo"
           />
         </NavLink>
